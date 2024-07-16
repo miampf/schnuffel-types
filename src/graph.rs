@@ -30,7 +30,7 @@ pub enum Node {
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-struct PhoneNumber {
+pub struct PhoneNumber {
     number: String,
 }
 impl PhoneNumber {
@@ -44,7 +44,7 @@ impl PhoneNumber {
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-struct EmailAddress {
+pub struct EmailAddress {
     email: String,
 }
 impl EmailAddress {
@@ -58,7 +58,7 @@ impl EmailAddress {
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-struct Domain {
+pub struct Domain {
     domain: String,
 }
 impl Domain {
@@ -72,7 +72,7 @@ impl Domain {
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-enum DNSRecord {
+pub enum DNSRecord {
     A(Ipv4Addr),
     AAAA(Ipv6Addr),
     CNAME {
