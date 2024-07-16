@@ -2,7 +2,7 @@ use extism_convert::{FromBytes, Msgpack, ToBytes};
 use petgraph::graph::DiGraph;
 use serde::{Deserialize, Serialize};
 use std::net::{IpAddr, Ipv4Addr, Ipv6Addr};
-use url_serde::SerdeUrl;
+use url::Url;
 
 pub type Graph = DiGraph<Node, String>;
 
@@ -11,11 +11,11 @@ pub type Graph = DiGraph<Node, String>;
 /// Node is a node in the Graph.
 pub enum Node {
     SocialMedia {
-        social_media_url: SerdeUrl,
-        account_url: SerdeUrl,
+        social_media_url: Url,
+        account_url: Url,
     },
     Website {
-        url: SerdeUrl,
+        url: Url,
     },
     IP(IpAddr),
     PhoneNumber(PhoneNumber),
