@@ -31,7 +31,7 @@ pub enum Node {
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub struct PhoneNumber {
-    number: String,
+    pub number: String,
 }
 impl PhoneNumber {
     #[must_use]
@@ -45,7 +45,7 @@ impl PhoneNumber {
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub struct EmailAddress {
-    email: String,
+    pub email: String,
 }
 impl EmailAddress {
     #[must_use]
@@ -59,7 +59,7 @@ impl EmailAddress {
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Domain {
-    domain: String,
+    pub domain: String,
 }
 impl Domain {
     #[must_use]
